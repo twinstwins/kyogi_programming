@@ -1,17 +1,9 @@
-
 while True:
-    n,x = map(int,input().split())
-
-
-    n,x = [5,9]
-
-    arr = [[i for i in range(n)]]
-
-
-    if n == 0 & x ==0:
-        break
-
-    for i in range(n):
-        for j in range(n):
-            for k in range(n):
-                print(arr[i+1] + arr[j+1] + arr[k+1])
+    n,x=map(int,input().split())
+    if n==0 and x==0:break
+    ans=0
+    for i in range(1,n+1):
+        for j in range(i+1,n+1):
+            for k in range(j+1,n+1):
+                if i+j+k==x:ans+=1
+    print(ans)
